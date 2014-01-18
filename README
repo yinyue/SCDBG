@@ -11,9 +11,20 @@
 	  \______________|
 
 	
-homepage: http://libemu.mwcollect.org
+libemu homepage: http://libemu.mwcollect.org
 
-this build has been modified form original. see CHANGES for details
+This build supports: 
+   100 hooks, 13 dlls, SEH, condensed output, interactive debug shell 
+
+see CHANGES for more details. note currently version is VS_LIBEMU repository 
+which is a Windows native build that is several years more advanced.
+
+Home Page:        http://sandsprite.com/blogs/index.php?uid=7&pid=152
+Manual:           http://sandsprite.com/CodeStuff/scdbg_manual/MANUAL_EN.html
+Basic Video:      http://www.youtube.com/watch?v=jFkegwFasIw
+Adv Video:        http://youtu.be/HZE2c_If6hU
+Demo Shellcodes:  http://sandsprite.com/blogs/files/sc_samples.zip
+
 
 building from svn:
   autoreconf -v -i
