@@ -558,7 +558,7 @@ uint32_t user_hook_fopen(struct emu_env *env, struct emu_env_hook *hook, ...)
 	int fd = mkstemp(localfile);
 	close(fd);
 
-	FILE *f = fopen(localfile,"w");
+	FILE *f = fopen(localfile,"wb");
 	printf("%x\tfopen(%s) = %x\n", retaddr, filename, (int)f);
 	printf("\tInteractive mode local file: %s\n", localfile);
 
@@ -782,7 +782,7 @@ HANDLE CreateFile(
 	int fd = mkstemp(localfile);
 	close(fd);
 
-	FILE *f = fopen(localfile,"w");
+	FILE *f = fopen(localfile,"wb");
 
 	printf("\tInteractive mode file:%s h=%x\n", localfile, handle);
 
@@ -1023,11 +1023,11 @@ LONG _lcreat(
 	int fd = mkstemp(localfile);
 	close(fd);
 
-	FILE *f = fopen(localfile,"w");
-
-	printf("\tInteractive mode local file: %s=%d  h\n", localfile, handle);
+	FILE *f = fopen(localfile,"wb");
 
 	nanny_add_file(hook->hook.win->userdata, localfile, &handle, f);
+	
+	printf("\tInteractive mode local file: %s  nannyHandle: %d  real handle: %d\n", localfile, handle, (uint32_t)f);
 
 	return handle;
 
