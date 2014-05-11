@@ -1,0 +1,2 @@
+scdbg是一款多平台开源的Shellcode模拟运行、分析工具。其基于libemulibrary搭建的虚拟环境，通过模拟32位处理器、内存和基本Windows API运行环境来虚拟执行Shellcode以分析其行为。有了虚拟执行妈妈再也不用担心我的电脑中病毒了。
+http://www.freebuf.com/tools/16320.html
